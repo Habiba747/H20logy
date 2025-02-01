@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Style.css">
+    <title>Water Intake Tracker</title>
+    <link rel="icon" href="logoo.jpg">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">💧 H20LOGY</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#Progress">Pogress</a></li>
+            <li><a href="#water-facts">Water Facts</a></li>
+            <li><button class="login-btn" onclick="openLoginModal()">Log In</button></li>
+        
+   
+        </ul>
+    </nav>
+ <!-- Login Modal -->
+ <div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeLoginModal()">&times;</span>
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <input type="password" id="password" placeholder="Enter your password" required>
+        <button onclick="login()">Login</button>
+        <p id="loginMessage"></p>
+    </div>
+</div>
+    
+<!-- Home Section -->
+<section id="home">
+    <h1>Drink Water</h1>
+    <div class="motivation">
+        <h2>Stay Hydrated! 💦</h2>
+        <p>Water is life! Drinking enough water improves focus, boosts energy, and keeps your skin glowing. Drink up! 🚰</p>
+    </div>
+
+     <!-- Animated Water Benefits Image -->
+     <div class="image-container">
+        <img src="hydrodrinkwater.webp" alt="Water Benefits" class="animated-image">
+    </div>
+
+    <!-- Game Section -->
+    <section id="game">
+        <h1 > Challange For You </h1>
+        <h3>Catch the Water Drops! 🎮</h3>
+        <p>Catch the water drops and add your score in your water goal! 💧</p>
+        <div class="game-container">
+            <div id="bucket" class="bucket"></div>
+            <div id="water-drop" class="water-drop"></div>
+        </div>
+        <p>Your goal: <span id="game-goal">0</span> Liters</p>
+    </section>
+</section>
+
+        
+    <!-- App Section -->
+    <section id="Progress">
+        <h2>Water Intake Tracker</h2>
+        <label for="goal">Set Your Water Intake Goal (Liters):</label>
+        <input type="number" id="goal" min="1" max="5" step="0.5" value="2">
+        <button onclick="setGoal()">Set Goal</button>
+        <h3>Goal: <span id="goalDisplay">2</span> Liters</h3>
+
+        <div class="cup">
+            <div class="remained" id="remained">
+                <span id="liters"></span>
+                <small>Remained</small>
+            </div>
+            <div class="percentage" id="percentage"></div>
+        </div>
+
+        <p class="text">Select how many glasses of water you have drunk</p>
+        <p>1 Glass = 500ml</p>
+        <div id="cupsContainer" class="cups"></div>
+    </section>
+    
+     <!-- Water Facts -->
+     <section id="water-facts">
+        <!-- Hero Section -->
+        <header class="hero-section">
+            <h1>💦 Discover Amazing Water Facts 💙</h1>
+            <p>Stay amazed by the wonders of water and the importance of hydration!</p>
+        </header>
+
+    <!-- Facts Section -->
+    <div class="facts-container">
+        <div class="fact-card">
+            <h2>Fact 1</h2>
+            <p>70% of the Earth's surface is covered with water.</p>
+        </div>
+
+        <div class="fact-card">
+            <h2>Fact 2</h2>
+            <p>The human body is made up of about 60% water.</p>
+        </div>
+
+        <div class="fact-card">
+            <h2>Fact 3</h2>
+            <p>Drinking enough water helps improve your brain function and mood.</p>
+        </div>
+
+        <div class="fact-card">
+            <h2>Fact 4</h2>
+            <p>Freshwater makes up less than 3% of all water on Earth.</p>
+        </div>
+
+        <div class="fact-card">
+            <h2>Fact 5</h2>
+            <p>Cold water is more hydrating and absorbed faster than warm water.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>💙 Stay Hydrated, Stay Healthy!</p>
+            <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+            <p>&copy; 2025 H20LOGY. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>
